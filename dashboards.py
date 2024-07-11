@@ -83,6 +83,7 @@ container3 = st.container()
 
 # Primeiro container com o primeiro gráfico
 with container1:
+    st.subheader('Unidade')
     unidade_total = df_filtered.groupby(['Unidade'])[['Nota']].mean().reset_index()
     fig_nota_unidade = px.bar(unidade_total, y="Nota", x="Unidade", height=500)
     fig_nota_unidade.update_traces(marker_color=color_bars(unidade_total['Nota']), texttemplate='%{y:.2f}', textposition='outside') 
@@ -98,6 +99,7 @@ with container1:
 
 # Segundo container com o segundo gráfico
 with container2:
+    st.subheader('Categoria')
     categoria_total = df_filtered.groupby(['Categoria'])[['Nota']].mean().reset_index()
     fig_nota_categoria = px.bar(categoria_total, y="Nota", x="Categoria", height=500)
     fig_nota_categoria.update_traces(marker_color=color_bars(categoria_total['Nota']), texttemplate='%{y:.2f}', textposition='outside') 
@@ -113,6 +115,7 @@ with container2:
 
 # Terceiro container com o terceiro gráfico
 with container3:
+    st.subheader('Integrante')
     integrante_total = df_filtered.groupby(['Integrante'])[['Nota']].mean().reset_index()
     fig_nota_integrante = px.bar(integrante_total, y="Nota", x="Integrante", height=500)
     fig_nota_integrante.update_traces(marker_color=color_bars(integrante_total['Nota']), texttemplate='%{y:.2f}', textposition='outside') 
