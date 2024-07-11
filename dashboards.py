@@ -5,8 +5,7 @@ import plotly.express as px
 
 st.set_page_config(layout='wide')
 
-# Adiciona o título da página centralizado
-st.markdown("<h1 style='text-align: center;'>🍔Bullguer Dash - Oficial🍔</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black;'>🍔Bullguer Dash - Oficial🍔</h1>", unsafe_allow_html=True)
 
 # Estilo personalizado para o fundo
 st.markdown(
