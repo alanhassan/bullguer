@@ -13,15 +13,18 @@ st.markdown(
     """
     <style>
     body {
-        background-color: #e1e1d5;
+        background-color: #d0d2d6;
+        color: black;  /* Definindo a cor do texto para preto */
     }
     .stApp {
-        background-color: #e1e1d5;
+        background-color: #d0d2d6;
+        color: black;  /* Definindo a cor do texto para preto */
     }
     </style>
     """,
     unsafe_allow_html=True
 )
+
 
 # Carregar o dataframe
 df = pd.read_excel('df.xlsx')
