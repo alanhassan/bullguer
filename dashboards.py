@@ -90,9 +90,9 @@ with container1:
         title_x=0.5, 
         plot_bgcolor='#f0f0f0', 
         paper_bgcolor='#f0f0f0',
-        xaxis=dict(title=None),  # Remove x-axis title
-        yaxis=dict(title=None),  # Remove y-axis title
-        font=dict(color='black')  # Set label color to black
+        xaxis=dict(title=None, tickfont=dict(color='black')),  # Remove x-axis title and set tick label color to black
+        yaxis=dict(title=None, tickfont=dict(color='black')),  # Remove y-axis title and set tick label color to black
+        font=dict(color='black')  # Set title and other labels to black
     )
     st.plotly_chart(fig_nota_unidade, use_container_width=True)
 
@@ -105,9 +105,9 @@ with container2:
         title_x=0.5, 
         plot_bgcolor='#f0f0f0', 
         paper_bgcolor='#f0f0f0',
-        xaxis=dict(title=None),  # Remove x-axis title
-        yaxis=dict(title=None),  # Remove y-axis title
-        font=dict(color='black')  # Set label color to black
+        xaxis=dict(title=None, tickfont=dict(color='black')),  # Remove x-axis title and set tick label color to black
+        yaxis=dict(title=None, tickfont=dict(color='black')),  # Remove y-axis title and set tick label color to black
+        font=dict(color='black')  # Set title and other labels to black
     )
     st.plotly_chart(fig_nota_categoria, use_container_width=True)
 
@@ -120,8 +120,8 @@ with container3:
         title_x=0.5, 
         plot_bgcolor='#f0f0f0', 
         paper_bgcolor='#f0f0f0',
-        xaxis=dict(title=None),  # Remove x-axis title
-        yaxis=dict(title=None),  # Remove y-axis title
-        font=dict(color='black')  # Set label color to black
+        xaxis=dict(title=None, tickfont=dict(color='black')),  # Remove x-axis title and set tick label color to black
+        yaxis=dict(title=None, tickfont=dict(color='black')),  # Remove y-axis title and set tick label color to black
+        font=dict(color='black')  # Set title and other labels to black
     )
     st.plotly_chart(fig_nota_integrante, use_container_width=True)
