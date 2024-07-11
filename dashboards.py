@@ -86,8 +86,14 @@ with container1:
     unidade_total = df_filtered.groupby(['Unidade'])[['Nota']].mean().reset_index()
     fig_nota_unidade = px.bar(unidade_total, y="Nota", x="Unidade", title="Unidade", height=500)
     fig_nota_unidade.update_traces(marker_color=color_bars(unidade_total['Nota']), texttemplate='%{y:.2f}', textposition='outside') 
-    fig_nota_unidade.update_layout(title_x=0.5, plot_bgcolor='#f0f0f0', paper_bgcolor='#f0f0f0')
-    fig_nota_unidade.update_yaxes(title_text=None)
+    fig_nota_unidade.update_layout(
+        title_x=0.5, 
+        plot_bgcolor='#f0f0f0', 
+        paper_bgcolor='#f0f0f0',
+        xaxis=dict(title=None),  # Remove x-axis title
+        yaxis=dict(title=None),  # Remove y-axis title
+        font=dict(color='black')  # Set label color to black
+    )
     st.plotly_chart(fig_nota_unidade, use_container_width=True)
 
 # Segundo container com o segundo gráfico
@@ -95,8 +101,14 @@ with container2:
     categoria_total = df_filtered.groupby(['Categoria'])[['Nota']].mean().reset_index()
     fig_nota_categoria = px.bar(categoria_total, y="Nota", x="Categoria", title="Categoria", height=500)
     fig_nota_categoria.update_traces(marker_color=color_bars(categoria_total['Nota']), texttemplate='%{y:.2f}', textposition='outside') 
-    fig_nota_categoria.update_layout(title_x=0.5, plot_bgcolor='#f0f0f0', paper_bgcolor='#f0f0f0')
-    fig_nota_categoria.update_yaxes(title_text=None)
+    fig_nota_categoria.update_layout(
+        title_x=0.5, 
+        plot_bgcolor='#f0f0f0', 
+        paper_bgcolor='#f0f0f0',
+        xaxis=dict(title=None),  # Remove x-axis title
+        yaxis=dict(title=None),  # Remove y-axis title
+        font=dict(color='black')  # Set label color to black
+    )
     st.plotly_chart(fig_nota_categoria, use_container_width=True)
 
 # Terceiro container com o terceiro gráfico
@@ -104,6 +116,12 @@ with container3:
     integrante_total = df_filtered.groupby(['Integrante'])[['Nota']].mean().reset_index()
     fig_nota_integrante = px.bar(integrante_total, y="Nota", x="Integrante", title="Integrante", height=500)
     fig_nota_integrante.update_traces(marker_color=color_bars(integrante_total['Nota']), texttemplate='%{y:.2f}', textposition='outside') 
-    fig_nota_integrante.update_layout(title_x=0.5, plot_bgcolor='#f0f0f0', paper_bgcolor='#f0f0f0')
-    fig_nota_integrante.update_yaxes(title_text=None)
+    fig_nota_integrante.update_layout(
+        title_x=0.5, 
+        plot_bgcolor='#f0f0f0', 
+        paper_bgcolor='#f0f0f0',
+        xaxis=dict(title=None),  # Remove x-axis title
+        yaxis=dict(title=None),  # Remove y-axis title
+        font=dict(color='black')  # Set label color to black
+    )
     st.plotly_chart(fig_nota_integrante, use_container_width=True)
