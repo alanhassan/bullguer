@@ -177,4 +177,4 @@ with container3:
         showarrow=False,
         font=dict(color='gray')
     )
-    st.plotly_chart(fig_nota_integrante, use_container_width=True)
+    st.plotly_chart(fig_nota_integrante, use_container_width=True) 
