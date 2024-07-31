@@ -115,14 +115,14 @@ with container1:
         x1=len(unidade_total['Unidade']) - 0.5,  # Adjusting the x1 value to end at the right
         y0=avg_nota_unidade,
         y1=avg_nota_unidade,
-        line=dict(color='blue', dash='dash')
+        line=dict(color='red', dash='dash')
     )
     fig_nota_unidade.add_annotation(
         x=len(unidade_total['Unidade']) - 0.2,  # Adjusting x position to be more on the right
         y=avg_nota_unidade,
         text=f'Média Filtro: {avg_nota_unidade:.2f}',
         showarrow=False,
-        font=dict(color='blue')
+        font=dict(color='red')
     )
     # Add global average only if filters are applied
     if filters_applied:
@@ -132,14 +132,14 @@ with container1:
             x1=len(unidade_total['Unidade']) - 0.5,
             y0=global_avg_nota_unidade,
             y1=global_avg_nota_unidade,
-            line=dict(color='red', dash='dash')
+            line=dict(color='blue', dash='dash')
         )
         fig_nota_unidade.add_annotation(
             x=len(unidade_total['Unidade']) - 0.2,
             y=global_avg_nota_unidade,
             text=f'Média Geral: {global_avg_nota_unidade:.2f}',
             showarrow=False,
-            font=dict(color='red')
+            font=dict(color='blue')
         )
     st.plotly_chart(fig_nota_unidade, use_container_width=True)
 
@@ -168,14 +168,14 @@ with container2:
         x1=len(categoria_total['Categoria']) - 0.5,  # Adjusting the x1 value to end at the right
         y0=avg_nota_categoria,
         y1=avg_nota_categoria,
-        line=dict(color='blue', dash='dash')
+        line=dict(color='red', dash='dash')
     )
     fig_nota_categoria.add_annotation(
         x=len(categoria_total['Categoria']) - 0.2,  # Adjusting x position to be more on the right
         y=avg_nota_categoria,
         text=f'Média Filtro: {avg_nota_categoria:.2f}',
         showarrow=False,
-        font=dict(color='blue')
+        font=dict(color='red')
     )
     # Add global average only if filters are applied
     if filters_applied:
@@ -185,14 +185,14 @@ with container2:
             x1=len(categoria_total['Categoria']) - 0.5,
             y0=global_avg_nota_categoria,
             y1=global_avg_nota_categoria,
-            line=dict(color='red', dash='dash')
+            line=dict(color='blue', dash='dash')
         )
         fig_nota_categoria.add_annotation(
             x=len(categoria_total['Categoria']) - 0.2,
             y=global_avg_nota_categoria,
             text=f'Média Geral: {global_avg_nota_categoria:.2f}',
             showarrow=False,
-            font=dict(color='red')
+            font=dict(color='blue')
         )
     st.plotly_chart(fig_nota_categoria, use_container_width=True)
 
@@ -221,14 +221,14 @@ with container3:
         x1=len(integrante_total['Integrante']) - 0.5,  # Adjusting the x1 value to end at the right
         y0=avg_nota_integrante,
         y1=avg_nota_integrante,
-        line=dict(color='blue', dash='dash')
+        line=dict(color='red', dash='dash')
     )
     fig_nota_integrante.add_annotation(
         x=len(integrante_total['Integrante']) - 0.2,  # Adjusting x position to be more on the right
         y=avg_nota_integrante,
         text=f'Média Filtro: {avg_nota_integrante:.2f}',
         showarrow=False,
-        font=dict(color='blue')
+        font=dict(color='red')
     )
     # Add global average only if filters are applied
     if filters_applied:
@@ -238,13 +238,13 @@ with container3:
             x1=len(integrante_total['Integrante']) - 0.5,
             y0=global_avg_nota_integrante,
             y1=global_avg_nota_integrante,
-            line=dict(color='red', dash='dash')
+            line=dict(color='blue', dash='dash')
         )
         fig_nota_integrante.add_annotation(
             x=len(integrante_total['Integrante']) - 0.2,
             y=global_avg_nota_integrante,
             text=f'Média Geral: {global_avg_nota_integrante:.2f}',
             showarrow=False,
-            font=dict(color='red')
+            font=dict(color='blue')
         )
     st.plotly_chart(fig_nota_integrante, use_container_width=True)
