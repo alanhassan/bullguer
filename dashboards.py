@@ -94,7 +94,7 @@ with container1:
     avg_nota_unidade = unidade_total['Nota'].mean()
 
     # Definir a ordem das unidades
-    order_unidades = ["Paraíso", "Vila Mariana", "Peixoto", "Mooca", "Cerro Corá", "Vila Nova Conceição", "Perdizes"]
+    order_unidades = ["Paraíso", "Vila Mariana", "Peixoto", "Mooca", "Cerro Corá", "Vila Nova Conceição", "Perdizes", "Eldorado", "Berrini"]
 
     fig_nota_unidade = px.bar(unidade_total, y="Nota", x="Unidade", height=500, 
                               category_orders={"Unidade": order_unidades})
