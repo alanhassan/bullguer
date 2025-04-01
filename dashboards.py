@@ -48,13 +48,15 @@ st.sidebar.title("Filtros")
 categorias = ['Todos'] + sorted(df['Categoria'].unique().tolist())
 integrantes = ['Todos'] + sorted(df['Integrante'].unique().tolist())
 unidades = ['Todos'] + sorted(df['Unidade'].unique().tolist())
+datas = ['Todos'] + sorted(df['Data'].unique().tolist())
 
 categoria = st.sidebar.selectbox("Categoria", categorias)
 integrante = st.sidebar.selectbox("Integrante", integrantes)
 unidade = st.sidebar.selectbox("Unidade", unidades)
+data = st.sidebar.selectbox("Data", datas)
 
 # Verificar se há filtros aplicados
-filters_applied = (categoria != 'Todos' or integrante != 'Todos' or unidade != 'Todos')
+filters_applied = (categoria != 'Todos' or integrante != 'Todos' or unidade != 'Todos' or data != 'Todos')
 
 # Filtra o dataframe com base na categoria, integrante e unidade selecionados, se "Todos" não estiver selecionado
 df_filtered = df.copy()
@@ -67,6 +69,9 @@ if integrante != 'Todos':
 
 if unidade != 'Todos':
     df_filtered = df_filtered[df_filtered['Unidade'] == unidade]
+
+if data != 'Todos':
+    df_filtered = df_filtered[df_filtered['Data'] == data]
 
 df_filtered = df_filtered.reset_index(drop=True)
 
